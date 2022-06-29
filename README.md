@@ -7,7 +7,7 @@ Fresh is a command line tool that builds and (re)starts your web application eve
     go get github.com/seantcanavan/fresh
 
 ## Usage
-
+    git clone git@github.com:seantcanavan/fresh.git
     cd fresh
     go install
 
