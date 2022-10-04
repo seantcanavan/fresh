@@ -11,7 +11,7 @@ import (
 func build() (string, bool) {
 	buildLog("Building...")
 
-	cmd := exec.Command("go", "build", "-o", buildPath(), "main.go")
+	cmd := exec.Command("go", "build", "-o", buildPath(), buildTarget())
 
 	fmt.Println(fmt.Sprintf("cmd is %s", cmd.String()))
 

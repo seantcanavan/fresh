@@ -18,21 +18,22 @@ const (
 )
 
 var settings = map[string]string{
-	"config_path":       "./runner.conf",
-	"root":              ".",
-	"tmp_path":          "./tmp",
-	"build_name":        "runner-build",
-	"build_log":         "runner-build-errors.log",
-	"valid_ext":         ".go, .tpl, .tmpl, .html",
-	"no_rebuild_ext":    ".tpl, .tmpl, .html",
-	"ignored":           "assets, tmp",
 	"build_delay":       "600",
+	"build_log":         "runner-build-errors.log",
+	"build_name":        "runner-build",
+	"build_target":      "main.go",
 	"colors":            "1",
-	"log_color_main":    "cyan",
+	"config_path":       "./runner.conf",
+	"ignored":           "assets, tmp",
+	"log_color_app":     "",
 	"log_color_build":   "yellow",
+	"log_color_main":    "cyan",
 	"log_color_runner":  "green",
 	"log_color_watcher": "magenta",
-	"log_color_app":     "",
+	"no_rebuild_ext":    ".tpl, .tmpl, .html",
+	"root":              ".",
+	"tmp_path":          "./tmp",
+	"valid_ext":         ".go, .tpl, .tmpl, .html",
 }
 
 var colors = map[string]string{
@@ -125,6 +126,10 @@ func buildPath() string {
 		p += ".exe"
 	}
 	return p
+}
+
+func buildTarget() string {
+	return settings["build_target"]
 }
 
 func buildErrorsFileName() string {
