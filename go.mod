@@ -1,4 +1,4 @@
-module github.com/seantcanavan/fresh
+module github.com/seantcanavan/fresh/v2
 
 go 1.18
 
