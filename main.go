@@ -15,7 +15,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/seantcanavan/fresh/runner"
+	"github.com/seantcanavan/fresh/v2/runner"
 	"os"
 )
 
